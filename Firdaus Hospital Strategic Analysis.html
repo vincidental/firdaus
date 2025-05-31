@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Strategic Analysis: Indonesian Healthcare Sector & Firdaus Group Positioning</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+      <style>
+         body {
+         font-family: 'Inter', Arial, Helvetica, sans-serif;
+         background: #FFFFFF;
+         color: #051C2C;
+         }
+         .hero-gradient {
+         background: linear-gradient(90deg, #2251FF 0%, #00B6FF 100%);
+         color: #FFFFFF;
+         }
+         .section-title {
+         font-size: 2rem;
+         font-weight: 700;
+         color: #2251FF;
+         margin-bottom: 1.5rem;
+         padding-bottom: 0.5rem;
+         border-bottom: 2px solid #2251FF;
+         letter-spacing: -0.5px;
+         }
+         .subsection-title {
+         font-size: 1.25rem;
+         font-weight: 600;
+         color: #2251FF;
+         margin-bottom: 1rem;
+         }
+         .content-section {
+         background-color: #FFFFFF;
+         padding: 2.5rem 2rem;
+         margin-bottom: 2rem;
+         border: 1px solid #F0F0F0;
+         box-shadow: 0 2px 8px 0 rgba(34, 81, 255, 0.04);
+         border-radius: 0.5rem;
+         }
+         .key-metric-value {
+         font-size: 2.25rem;
+         font-weight: 700;
+         color: #2251FF;
+         }
+         .key-metric-label {
+         font-size: 0.95rem;
+         color: #444;
+         margin-top: 0.25rem;
+         }
+         .professional-list > li {
+         padding-left: 1.5rem;
+         position: relative;
+         margin-bottom: 0.5rem;
+         color: #051C2C;
+         }
+         .professional-list > li::before {
+         content: "•";
+         color: #2251FF;
+         font-weight: bold;
+         display: inline-block;
+         width: 1em;
+         margin-left: -1.2em;
+         position: absolute;
+         left: 0.5em;
+         top: 0.05em;
+         }
+         .timeline-item-prof {
+         position: relative;
+         padding-bottom: 1.5rem;
+         padding-left: 1.5rem;
+         border-left: 2px solid #2251FF;
+         }
+         .timeline-item-prof:last-child {
+         border-left: 2px solid transparent;
+         padding-bottom: 0;
+         }
+         .timeline-dot-prof {
+         position: absolute;
+         left: -7px;
+         top: 0.25rem; 
+         width: 0.75rem;
+         height: 0.75rem;
+         border-radius: 9999px;
+         background-color: #2251FF;
+         border: 2px solid #FFFFFF;
+         }
+         .flow-step {
+         border: 1px solid #F0F0F0;
+         padding: 0.75rem 1rem;
+         border-radius: 0.25rem;
+         text-align: center;
+         background-color: #F0F0F0;
+         color: #051C2C;
+         font-size: 0.95rem;
+         }
+         .flow-arrow {
+         font-size: 1.5rem;
+         color: #2251FF;
+         margin: 0 0.5rem;
+         align-self: center;
+         }
+         .takeaway-box {
+         background: #F0F0F0;
+         border-left: 4px solid #2251FF;
+         padding: 1rem 1.5rem;
+         margin-bottom: 1.5rem;
+         border-radius: 0.25rem;
+         }
+         .takeaway-title {
+         font-weight: 600;
+         color: #2251FF;
+         margin-bottom: 0.25rem;
+         font-size: 1.05rem;
+         }
+         .chart-container {
+         position: relative;
+         width: 100%;
+         max-width: 700px; 
+         margin-left: auto;
+         margin-right: auto;
+         height: 300px; 
+         max-height: 350px;
+         }
+         @media (min-width: 768px) {
+         .chart-container {
+         height: 320px;
+         }
+         }
+         footer {
+         background: #051C2C;
+         color: #FFFFFF;
+         }
+         /* Remove old McKinsey classes */
+      </style>
+   </head>
+   <body>
+      <header class="hero-gradient py-14 text-center shadow-md">
+         <h1 class="text-4xl font-bold tracking-tight mb-2" style="letter-spacing:-1px;">Indonesian Healthcare Sector: Strategic Analysis</h1>
+         <p class="text-xl font-medium">Firdaus Group Market Positioning and Growth Opportunities</p>
+      </header>
+      <main class="container mx-auto px-4 py-10 max-w-5xl">
+         <!-- Executive Summary -->
+         <section id="executive-summary" class="content-section mb-8">
+            <h2 class="section-title">Executive Summary</h2>
+            <div class="takeaway-box">
+               <div class="takeaway-title">At a Glance</div>
+               <ul class="list-disc pl-6 text-base">
+                  <li>Indonesia's healthcare sector is expanding, driven by demographics, government investment, and digitalization.</li>
+                  <li>Firdaus Group is a leading Type C hospital with strong community presence and "Paripurna" accreditation.</li>
+                  <li>Key opportunities: digital integration, BPJS optimization, and niche service development.</li>
+                  <li>Chief of Staff role is recommended to accelerate execution and support sustainable growth.</li>
+               </ul>
+            </div>
+            <p class="mt-4 text-base">
+               This report provides a strategic analysis of the Indonesian healthcare landscape and Firdaus Group's positioning in North Jakarta. It highlights market dynamics, competition, and actionable recommendations for growth.
+            </p>
+         </section>
+         <!-- Section 1: Market Dynamics -->
+         <section id="market-dynamics" class="content-section">
+            <h2 class="section-title">1. Indonesian Healthcare Market Dynamics</h2>
+            <div class="takeaway-box">
+               <div class="takeaway-title">Key Takeaways</div>
+               <ul class="list-disc pl-6 text-base">
+                  <li>Large population and rising health expenditure drive sector growth.</li>
+                  <li>BPJS Kesehatan is central to access and revenue, but presents operational challenges.</li>
+                  <li>Digital transformation is a national priority, with EHR and telemedicine adoption accelerating.</li>
+               </ul>
+            </div>
+            <p class="mb-6">
+               Indonesia's healthcare market is growing rapidly, supported by demographic trends, increased government spending, and digital transformation. Understanding these dynamics is essential for strategic planning.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+               <div class="text-center p-4 border border-[#F0F0F0] rounded-md">
+                  <div class="key-metric-value">270M+</div>
+                  <div class="key-metric-label">Total Population</div>
+                  <p class="text-xs text-[#444] mt-1">Sustained demand for healthcare services.</p>
+               </div>
+               <div class="text-center p-4 border border-[#F0F0F0] rounded-md">
+                  <div class="key-metric-value">IDR 186.4T</div>
+                  <div class="key-metric-label">National Health Budget (2024)</div>
+                  <p class="text-xs text-[#444] mt-1">Reflects government commitment to transformation.</p>
+               </div>
+               <div class="text-center p-4 border border-[#F0F0F0] rounded-md">
+                  <div class="key-metric-value">~34%</div>
+                  <div class="key-metric-label">Private Hospital Growth (CAGR)</div>
+                  <p class="text-xs text-[#444] mt-1">Expanding role for private providers.</p>
+               </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+               <div>
+                  <h3 class="subsection-title">National & DKI Jakarta Health Priorities</h3>
+                  <p class="text-sm mb-3">Alignment with government priorities enables collaboration and support. Focus areas include infectious disease control and system strengthening.</p>
+                  <div class="chart-container h-[280px] md:h-[300px]">
+                     <canvas id="prioritiesChart"></canvas>
+                  </div>
+                  <p class="text-xs text-[#444] mt-2 text-center">Illustrative data based on qualitative report focus.</p>
+               </div>
+               <div>
+                  <h3 class="subsection-title">BPJS Kesehatan Ecosystem Impact</h3>
+                  <p class="text-sm mb-3">BPJS Kesehatan is pivotal for service financing, driving patient volume but also presenting tariff and claims processing challenges for hospitals.</p>
+                  <div class="space-y-3">
+                     <div class="flex items-center justify-around">
+                        <div class="flow-step w-2/5">Patient (BPJS Member)</div>
+                        <div class="flow-arrow">&rarr;</div>
+                        <div class="flow-step w-2/5">Hospital (BPJS Partner)</div>
+                     </div>
+                     <div class="flex justify-center my-1">
+                        <div class="flow-arrow transform rotate-90">&darr;</div>
+                     </div>
+                     <div class="flow-step w-full">Claims Submission & Reimbursement Process (BPJS)</div>
+                     <div class="grid grid-cols-2 gap-2 mt-2">
+                        <div class="bg-[#2251FF] bg-opacity-10 p-2 rounded-sm">
+                           <div class="font-semibold text-[#2251FF] text-xs">Benefit:</div>
+                           <p class="text-xs text-[#051C2C]">Increased patient volume, revenue stream</p>
+                        </div>
+                        <div class="bg-red-500/10 p-2 rounded-sm">
+                           <div class="font-semibold text-red-600 text-xs">Challenge:</div>
+                           <p class="text-xs text-[#051C2C]">Tariff constraints, payment delays, admin complexity</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="mt-8">
+               <h3 class="subsection-title">Digital Transformation Imperative</h3>
+               <p class="text-sm mb-4">Adoption of EHR, telemedicine, and AI is critical for operational efficiency and service quality.</p>
+               <div class="relative">
+                  <div class="timeline-item-prof">
+                     <div class="timeline-dot-prof"></div>
+                     <h4 class="font-semibold text-[#2251FF] text-sm">National EHR Mandate (2024)</h4>
+                     <p class="text-xs text-[#051C2C]">Data integration via SATUSEHAT platform for interoperability.</p>
+                  </div>
+                  <div class="timeline-item-prof">
+                     <div class="timeline-dot-prof"></div>
+                     <h4 class="font-semibold text-[#2251FF] text-sm">Telemedicine Expansion</h4>
+                     <p class="text-xs text-[#051C2C]">Broader access, especially for remote areas.</p>
+                  </div>
+                  <div class="timeline-item-prof">
+                     <div class="timeline-dot-prof"></div>
+                     <h4 class="font-semibold text-[#2251FF] text-sm">AI Adoption</h4>
+                     <p class="text-xs text-[#051C2C]">Potential in diagnostics, analytics, and resource optimization.</p>
+                  </div>
+               </div>
+               <p class="text-xs text-[#444] mt-2">Key challenges: data security, infrastructure, workforce adaptation.</p>
+            </div>
+         </section>
+         <!-- Section 2: Firdaus Group Profile -->
+         <section id="firdaus-group-profile" class="content-section">
+            <h2 class="section-title">2. Firdaus Group: Profile and Evolution</h2>
+            <div class="takeaway-box">
+               <div class="takeaway-title">Key Takeaways</div>
+               <ul class="list-disc pl-6 text-base">
+                  <li>Firdaus Group has evolved from a specialized clinic to a Type C general hospital with top-tier accreditation.</li>
+                  <li>Core values and community focus drive its service model and reputation.</li>
+                  <li>Service portfolio is diversified, with strengths in pulmonology and emerging specialties.</li>
+               </ul>
+            </div>
+            <p class="mb-6">
+               Firdaus Group operates Firdaus Hospital, a Type C General Hospital with "Paripurna" accreditation, reflecting its commitment to quality and community service.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+               <div class="text-center p-3 border border-[#F0F0F0] rounded-md">
+                  <div class="font-semibold text-[#2251FF] text-lg">Type C General Hospital</div>
+                  <p class="text-xs text-[#444] mt-1">Primary and specialist medical services.</p>
+               </div>
+               <div class="text-center p-3 border border-[#F0F0F0] rounded-md">
+                  <div class="font-semibold text-[#2251FF] text-lg">~142 Beds</div>
+                  <p class="text-xs text-[#444] mt-1">Capacity to serve the local community.</p>
+               </div>
+               <div class="text-center p-3 border border-[#F0F0F0] rounded-md">
+                  <div class="font-semibold text-[#2251FF] text-lg">KARS "Paripurna" Accreditation</div>
+                  <p class="text-xs text-[#444] mt-1">Highest national standard for quality & patient safety.</p>
+               </div>
+            </div>
+            <div class="mb-8">
+               <h3 class="subsection-title">Firdaus Hospital Growth Trajectory</h3>
+               <div class="flex flex-col sm:flex-row items-center justify-between p-4 border border-[#F0F0F0] rounded-md">
+                  <div class="text-center sm:w-1/3 mb-2 sm:mb-0">
+                     <div class="text-lg font-semibold text-[#2251FF]">1998</div>
+                     <div class="text-xs text-[#051C2C] mt-1">Firdaus Clinic (Pulmonary Focus)</div>
+                  </div>
+                  <div class="text-xl text-[#2251FF] hidden sm:block">&rarr;</div>
+                  <div class="text-xl text-[#2251FF] sm:hidden mb-1">&darr;</div>
+                  <div class="text-center sm:w-1/3 mb-2 sm:mb-0">
+                     <div class="text-lg font-semibold text-[#2251FF]">2011</div>
+                     <div class="text-xs text-[#051C2C] mt-1">Firdaus Pulmonary Hospital</div>
+                  </div>
+                  <div class="text-xl text-[#2251FF] hidden sm:block">&rarr;</div>
+                  <div class="text-xl text-[#2251FF] sm:hidden mb-1">&darr;</div>
+                  <div class="text-center sm:w-1/3">
+                     <div class="text-lg font-semibold text-[#2251FF]">2016</div>
+                     <div class="text-xs text-[#051C2C] mt-1">Firdaus General Hospital (Type C)</div>
+                  </div>
+               </div>
+               <p class="text-xs text-center text-[#444] mt-2">Evolution driven by community needs and national health priorities.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+               <div>
+                  <h3 class="subsection-title">Core Values: F.O.C.U.S.</h3>
+                  <p class="text-sm mb-3">Guiding principles for service delivery: "Serving Your Happiness" ("Dedicated to Your Well-being").</p>
+                  <ul class="space-y-1 text-sm">
+                     <li class="flex items-center"><span class="font-semibold text-[#2251FF] w-20">Focus:</span> Leading service quality.</li>
+                     <li class="flex items-center"><span class="font-semibold text-[#2251FF] w-20">Integrity:</span> Upholding ethical standards.</li>
+                     <li class="flex items-center"><span class="font-semibold text-[#2251FF] w-20">Realistic:</span> Understanding community needs.</li>
+                     <li class="flex items-center"><span class="font-semibold text-[#2251FF] w-20">Daring:</span> Embracing change & innovation.</li>
+                     <li class="flex items-center"><span class="font-semibold text-[#2251FF] w-20">Agile:</span> Resilient & adaptive.</li>
+                     <li class="flex items-center"><span class="font-semibold text-[#2251FF] w-20">Unique:</span> Distinctive & memorable service.</li>
+                     <li class="flex items-center"><span class="font-semibold text-[#2251FF] w-20">Synergy:</span> Team collaboration.</li>
+                  </ul>
+               </div>
+               <div>
+                  <h3 class="subsection-title">Key Service Portfolio Highlights</h3>
+                  <p class="text-sm mb-3">Specialized areas at the core of service development.</p>
+                  <ul class="professional-list text-sm">
+                     <li>Phacoemulsification Cataract Surgery</li>
+                     <li>Orthopedics & Traumatology Center</li>
+                     <li>Urology Clinic</li>
+                     <li>Pulmonology & Respiratory Care</li>
+                     <li>Cardiology Services</li>
+                  </ul>
+                  <p class="text-xs text-[#444] mt-2">Supported by CT Scan, Hemodialysis, and VIP Inpatient Wards.</p>
+               </div>
+            </div>
+         </section>
+         <!-- Section 3: Competitive Environment -->
+         <section id="competitive-environment" class="content-section">
+            <h2 class="section-title">3. Competitive Environment & Positioning (North Jakarta)</h2>
+            <div class="takeaway-box">
+               <div class="takeaway-title">Key Takeaways</div>
+               <ul class="list-disc pl-6 text-base">
+                  <li>North Jakarta's healthcare market is competitive and diverse.</li>
+                  <li>Firdaus Hospital's differentiators: accreditation, community roots, and accessibility.</li>
+                  <li>Innovation and specialization are essential for sustained advantage.</li>
+               </ul>
+            </div>
+            <p class="mb-6">
+               North Jakarta's healthcare market is diverse and competitive. Firdaus Hospital's differentiators enable it to compete and grow in this landscape.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+               <div>
+                  <h3 class="subsection-title">Firdaus Hospital: Key Differentiators</h3>
+                  <ul class="professional-list text-sm space-y-1">
+                     <li>KARS "Paripurna" Accreditation: Highest quality assurance.</li>
+                     <li>Established Pulmonology Expertise: Specialized strength.</li>
+                     <li>Deep Community Roots (Since 1998): Local presence & loyalty.</li>
+                     <li>"FOCUS" Core Values: Distinct service culture.</li>
+                     <li>Accessibility (Type C & BPJS): Broad patient segment.</li>
+                  </ul>
+               </div>
+               <div>
+                  <h3 class="subsection-title">Illustrative Competitor Snapshot</h3>
+                  <p class="text-sm mb-3">Conceptual comparison of Firdaus Hospital against key North Jakarta players (perceived strengths).</p>
+                  <div class="chart-container h-[280px] md:h-[300px]">
+                     <canvas id="competitorChart"></canvas>
+                  </div>
+                  <p class="text-xs text-[#444] mt-2 text-center">Illustrative data for conceptual comparison.</p>
+               </div>
+            </div>
+         </section>
+         <!-- Section 4: Strategic Considerations -->
+         <section id="strategic-considerations" class="content-section">
+            <h2 class="section-title">4. Strategic Considerations & Path Forward</h2>
+            <div class="takeaway-box">
+               <div class="takeaway-title">Key Takeaways</div>
+               <ul class="list-disc pl-6 text-base">
+                  <li>Digital integration, BPJS optimization, and niche service development are priorities.</li>
+                  <li>Chief of Staff can drive execution, governance, and stakeholder management.</li>
+                  <li>Strategic focus and operational excellence are critical for growth.</li>
+               </ul>
+            </div>
+            <p class="mb-6">
+               Sustainable growth for Firdaus Group requires focus on strategic areas, with a Chief of Staff as a key enabler for the CEO.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+               <div>
+                  <h3 class="subsection-title">Key Strategic Opportunities</h3>
+                  <div class="space-y-3">
+                     <div class="p-3 border border-[#F0F0F0] rounded-md bg-[#F0F0F0]">
+                        <h4 class="font-semibold text-[#2251FF] text-sm">Comprehensive Digital Integration</h4>
+                        <p class="text-xs text-[#051C2C]">EHR optimization, telemedicine, AI exploration.</p>
+                     </div>
+                     <div class="p-3 border border-[#F0F0F0] rounded-md bg-[#F0F0F0]">
+                        <h4 class="font-semibold text-[#2251FF] text-sm">BPJS Partnership Optimization</h4>
+                        <p class="text-xs text-[#051C2C]">Streamlining claims while maintaining quality.</p>
+                     </div>
+                     <div class="p-3 border border-[#F0F0F0] rounded-md bg-[#F0F0F0]">
+                        <h4 class="font-semibold text-[#2251FF] text-sm">Niche Service Development</h4>
+                        <p class="text-xs text-[#051C2C]">Strengthening specializations and preventive care.</p>
+                     </div>
+                     <div class="p-3 border border-[#F0F0F0] rounded-md bg-[#F0F0F0]">
+                        <h4 class="font-semibold text-[#2251FF] text-sm">Enhanced CSR Impact</h4>
+                        <p class="text-xs text-[#051C2C]">Formalizing strategic and impactful CSR programs.</p>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <h3 class="subsection-title">Chief of Staff: Strategic Enabler</h3>
+                  <p class="text-sm mb-3">A Chief of Staff (CoS) augments CEO effectiveness by:</p>
+                  <div class="space-y-2 text-sm">
+                     <div class="p-2 border border-[#2251FF] rounded-sm flex items-center bg-[#2251FF] bg-opacity-5">
+                        <span class="text-lg mr-2 text-[#2251FF]">&#10003;</span> Driving strategy execution.
+                     </div>
+                     <div class="p-2 border border-[#2251FF] rounded-sm flex items-center bg-[#2251FF] bg-opacity-5">
+                        <span class="text-lg mr-2 text-[#2251FF]">&#10003;</span> Championing operational excellence & governance.
+                     </div>
+                     <div class="p-2 border border-[#2251FF] rounded-sm flex items-center bg-[#2251FF] bg-opacity-5">
+                        <span class="text-lg mr-2 text-[#2251FF]">&#10003;</span> Supporting growth initiatives & positioning.
+                     </div>
+                     <div class="p-2 border border-[#2251FF] rounded-sm flex items-center bg-[#2251FF] bg-opacity-5">
+                        <span class="text-lg mr-2 text-[#2251FF]">&#10003;</span> Managing key stakeholder relations.
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Conclusion -->
+         <section id="conclusion" class="content-section">
+            <h2 class="section-title">Concluding Remarks</h2>
+            <div class="takeaway-box">
+               <div class="takeaway-title">Summary</div>
+               <ul class="list-disc pl-6 text-base">
+                  <li>Firdaus Group is positioned to capitalize on sector growth through strategic focus and operational excellence.</li>
+                  <li>Continued investment in digital, people, and process capabilities is key to long-term success.</li>
+                  <li>Leadership support, including a Chief of Staff, will accelerate transformation and impact.</li>
+               </ul>
+            </div>
+            <p class="mt-4 text-base">
+               Indonesia's healthcare sector is at an inflection point. Firdaus Group's commitment to quality, innovation, and community service provides a strong foundation for future growth. Strategic execution and leadership are critical to realizing this potential.
+            </p>
+         </section>
+      </main>
+      <footer class="py-4 text-center mt-8">
+         <p class="text-xs">&copy; 2025 Strategic Analysis. This document is for discussion purposes only.</p>
+         <p class="text-xs mt-1">
+            Prepared by <a href="https://www.linkedin.com/in/vincentiustheodore/" target="_blank" rel="noopener" style="color:#2251FF;text-decoration:underline;">Vincentius Theodore</a>
+         </p>
+      </footer>
+      <script>
+         const mckinseyChartColors = {
+             primaryBlue: '#2251FF',
+             secondaryBlue: '#00B6FF',
+             accentGray: '#F0F0F0',
+             darkSurface: '#051C2C',
+             white: '#FFFFFF',
+             text: '#051C2C',
+             axis: '#444'
+         };
+         function wrapLabels(labels, maxWidth) {
+             return labels.map(label => {
+                 if (typeof label === 'string' && label.length > maxWidth) {
+                     const words = label.split(' ');
+                     const lines = [];
+                     let currentLine = '';
+                     words.forEach(word => {
+                         if ((currentLine + word).length > maxWidth && currentLine.length > 0) {
+                             lines.push(currentLine.trim());
+                             currentLine = word + ' ';
+                         } else {
+                             currentLine += word + ' ';
+                         }
+                     });
+                     lines.push(currentLine.trim());
+                     return lines;
+                 }
+                 return label;
+             });
+         }
+         const standardTooltipCallbacks = {
+             title: function(tooltipItems) {
+                 const item = tooltipItems[0];
+                 let label = item.chart.data.labels[item.dataIndex];
+                 if (Array.isArray(label)) {
+                   return label.join(' ');
+                 } else {
+                   return label;
+                 }
+             }
+         };
+         const prioritiesCtx = document.getElementById('prioritiesChart').getContext('2d');
+         new Chart(prioritiesCtx, {
+             type: 'bar',
+             data: {
+                 labels: wrapLabels(['TB Elimination', 'Digital Transformation', 'Primary Care Strengthening', 'Healthcare Workforce Dev.', 'Med. Device Self-Sufficiency'], 25),
+                 datasets: [{
+                     label: 'Priority Level (Illustrative)',
+                     data: [90, 85, 80, 75, 70], 
+                     backgroundColor: mckinseyChartColors.primaryBlue,
+                     borderColor: mckinseyChartColors.secondaryBlue,
+                     borderWidth: 1,
+                     barPercentage: 0.6,
+                     categoryPercentage: 0.7
+                 }]
+             },
+             options: {
+                 responsive: true,
+                 maintainAspectRatio: false,
+                 indexAxis: 'y',
+                 scales: {
+                     x: {
+                         beginAtZero: true,
+                         max: 100,
+                         ticks: { 
+                             color: mckinseyChartColors.axis, 
+                             font: { size: 10 } 
+                         },
+                         grid: { 
+                             display: true, 
+                             color: mckinseyChartColors.accentGray,
+                             drawBorder: false,
+                         }
+                     },
+                     y: {
+                         ticks: { 
+                             color: mckinseyChartColors.axis, 
+                             font: { size: 10 }
+                         },
+                         grid: { display: false }
+                     }
+                 },
+                 plugins: {
+                     legend: { display: false },
+                     title: {
+                         display: true,
+                         text: 'Key National Healthcare Priorities (Illustrative)',
+                         align: 'start',
+                         padding: { bottom: 10 },
+                         color: mckinseyChartColors.primaryBlue,
+                         font: { size: 12, weight: '600' }
+                     },
+                     tooltip: { 
+                         callbacks: standardTooltipCallbacks,
+                         backgroundColor: mckinseyChartColors.darkSurface,
+                         titleColor: mckinseyChartColors.white,
+                         bodyColor: mckinseyChartColors.white,
+                      }
+                 }
+             }
+         });
+         const competitorCtx = document.getElementById('competitorChart').getContext('2d');
+         new Chart(competitorCtx, {
+             type: 'bar',
+             data: {
+                 labels: wrapLabels(['Firdaus Hospital', 'RSUD Koja (Public)', 'Mitra Keluarga KG (Premium Private)'], 25),
+                 datasets: [{
+                     label: 'Perceived Strength Score (Illustrative)',
+                     data: [75, 85, 90], 
+                     backgroundColor: [mckinseyChartColors.primaryBlue, mckinseyChartColors.accentGray, mckinseyChartColors.secondaryBlue],
+                     borderColor: mckinseyChartColors.secondaryBlue,
+                     borderWidth: 0,
+                     barPercentage: 0.6,
+                     categoryPercentage: 0.7
+                 }]
+             },
+             options: {
+                 responsive: true,
+                 maintainAspectRatio: false,
+                 indexAxis: 'y',
+                 scales: {
+                     x: {
+                         beginAtZero: true,
+                         max: 100,
+                         ticks: { 
+                             color: mckinseyChartColors.axis, 
+                             font: { size: 10 }
+                         },
+                          grid: { 
+                             display: true, 
+                             color: mckinseyChartColors.accentGray,
+                             drawBorder: false,
+                         }
+                     },
+                     y: {
+                         ticks: { 
+                             color: mckinseyChartColors.axis, 
+                             font: { size: 10 }
+                         },
+                         grid: { display: false }
+                     }
+                 },
+                 plugins: {
+                     legend: { display: false },
+                      title: {
+                         display: true,
+                         text: 'Comparative Positioning (Illustrative Scores)',
+                         align: 'start',
+                         padding: { bottom: 10 },
+                         color: mckinseyChartColors.primaryBlue,
+                         font: { size: 12, weight: '600' }
+                     },
+                     tooltip: { 
+                         callbacks: standardTooltipCallbacks,
+                         backgroundColor: mckinseyChartColors.darkSurface,
+                         titleColor: mckinseyChartColors.white,
+                         bodyColor: mckinseyChartColors.white,
+                     }
+                 }
+             }
+         });
+      </script>
+   </body>
+</html>
